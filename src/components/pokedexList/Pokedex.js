@@ -8,7 +8,7 @@ const Pokedex = () => {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    const promise = axios('https://pokeapi.co/api/v2/pokemon/?limit=10&offset=0');
+    const promise = axios('https://pokeapi.co/api/v2/pokemon/');
     promise.then(res => {
       setPokemons(res.data.results);
     });

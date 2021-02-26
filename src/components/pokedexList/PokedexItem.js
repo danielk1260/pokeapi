@@ -18,7 +18,6 @@ const PokedexItem = ({ url }) => {
         defense: res.data.stats[2].base_stat,
         speed: res.data.stats[5].base_stat
       })
-      console.log(res.data)
     });
   }, [])
 
@@ -27,7 +26,7 @@ const PokedexItem = ({ url }) => {
       <div><b>Nombre:</b> {pokemon.name}</div>
       <img src={pokemon.image} alt="" width="90px"/>
       <p> <b>Types:</b> {" "}
-        {pokemon.type.map((value) => {
+        { pokemon.type.map((value) => {
           return(
             <span key={value.slot}>{value.type.name}, </span>
           )
