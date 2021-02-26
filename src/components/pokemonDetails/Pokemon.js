@@ -8,7 +8,6 @@ const Pokemon = () => {
 
   const {id} = useParams();
   
-
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
